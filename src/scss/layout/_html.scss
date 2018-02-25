@@ -21,3 +21,23 @@ body,
 .padding-40{
     @include paddingAll(40);
 }
+
+.padding-30{
+    @include paddingAll(30);
+}
+
+.padding-r40{
+    padding-right: 40px;
+}
+
+.padding-l40{
+    padding-left: 40px;
+}
+
+.padding-b40{
+    padding-bottom: 40px;
+}
+
+.padding-t40{
+    padding-top: 40px;
+}

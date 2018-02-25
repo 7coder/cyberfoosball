@@ -1,0 +1,80 @@
+<div class="container height-full">
+    <div class="row justify-content-center height-full">
+        <div class="col-10 col-md-10 col-lg-10 padding-r40 padding-l40 padding-b40 lobby-container">
+  
+          <div class="text-center margin-b40">
+              <h3 class="padding-30 font-weight-bold cyber-font container-logo">CyberFoosball</h3>
+          </div>
+
+          <!-- Search -->
+          <div class="row margin-b40">
+
+            <div class="col-12">
+
+              <div class="row">
+
+                <div class="col-1" *ngFor="let i of playerImages;">
+                  <div class="form-group text-center">
+                      <input mdbDeepDirective type="checkbox" id="checkbox{{i.id}}">
+                      <label for="checkbox{{i.id}}"><img src="{{ photoValidate(i) }}" class="rounded-circle player-image" mdbTooltip="{{ i.name }}" placement="top" (click)="selectPlayer(i)"></label>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-9">
+                
+                <div class="btn-group">
+                    <label class="btn btn-blue-grey waves-light" [(ngModel)]="model.fill" mdbRadio="A" mdbRippleRadius>
+                        Fill Team A
+                    </label>
+                    <label class="btn btn-blue-grey waves-light" [(ngModel)]="model.fill" mdbRadio="B" mdbRippleRadius>
+                        Fill Team B
+                    </label>
+                </div>
+                
+            </div>
+
+            <div class="col-3 text-right">
+                <button type="button" class="btn btn-primary waves-light" mdbRippleRadius (click)=invitePlayer()>Invite player(s)</button>
+            </div>
+
+          </div>
+          <!-- /Search -->
+
+
+          <!-- Team Componentes -->
+          <div class="row margin-b40">
+
+            <div class="col-6">
+                <div class="padding-40">
+                  <app-team title="Team A" context="team_a"></app-team>
+                </div>
+            </div>
+
+            <div class="col-6">
+              <div class="padding-40">
+                <app-team title="Team B" context="team_b"></app-team>
+              </div>
+            </div>
+
+          </div>
+          <!-- /Team Componentes -->
+
+          
+          <!-- Play game -->
+          <div class="row">
+
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-success waves-light" mdbRippleRadius><i class="fa fa-magic mr-1"></i> Play Game</button>
+            </div>
+
+          </div>
+          <!-- /Play game -->
+  
+        </div>
+    </div>
+  </div>
+  

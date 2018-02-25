@@ -19,6 +19,19 @@ export class ApiService {
     });
   }
 
+  getPhotoPlayers(): Observable<IPlayersPhoto[]>{
+    return this.http.get( this.getPlayersUrl ).map( data => {
+      let players = data['players'];
+      return players.map( ( player, index ) => {
+        return {
+          id : index,
+          photo: player['photo'],
+          name : player['name']
+        }
+      })
+    });
+  }
+
 }
 
 
@@ -30,4 +43,10 @@ export interface IPlayers {
   gamesPlayed: number,
   email: string,
   photo: string
+}
+
+export interface IPlayersPhoto{
+  id: number,
+  photo: string,
+  name: string
 }
