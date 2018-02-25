@@ -1,0 +1,22 @@
+
+/*** 
+    Mixins for components
+***/
+
+@mixin imageCover( $link ){
+    background-color: transparent;
+    background-image: url($link);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@mixin transparency( $koeff ){
+    opacity: $koeff;
+}
+
+@mixin paddingAll( $amount ){
+    padding: $amount * 1px;
+}
+

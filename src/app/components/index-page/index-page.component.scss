@@ -1,0 +1,7 @@
+
+// Import Mixins
+@import '../../../scss/abstract/_mixins';
+
+.cyber-bg{
+    @include imageCover('/assets/img/bg.jpg')
+}

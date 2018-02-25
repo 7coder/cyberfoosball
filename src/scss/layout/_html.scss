@@ -1,0 +1,23 @@
+
+
+//Import Mixins
+@import '../abstract/_mixins';
+
+html,
+body,
+.height-full{
+    height: 100%!important;
+    min-height: 100%!important;
+}
+
+.margin-b20{
+    margin-bottom: 20px;
+}
+
+.margin-b40{
+    margin-bottom: 40px;
+}
+
+.padding-40{
+    @include paddingAll(40);
+}
