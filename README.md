@@ -11,3 +11,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Browser Compatibility
 IE 10-11 friendly.
+
+### PS
+Please use login `123` and password `123` to enter the site.
